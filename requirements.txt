@@ -1,3 +1,4 @@
+altgraph==0.17.3
 astroid==2.14.1
 autopep8==2.0.1
 beautifulsoup4==4.11.2
@@ -22,6 +23,7 @@ grpcio-status==1.51.1
 idna==3.4
 isort==5.12.0
 lazy-object-proxy==1.9.0
+macholib==1.16.2
 mccabe==0.7.0
 numpy==1.24.1
 oauthlib==3.2.2
@@ -36,6 +38,8 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycodestyle==2.10.0
 pydata-google-auth==1.6.0
+pyinstaller==5.7.0
+pyinstaller-hooks-contrib==2022.15
 pylint==2.16.1
 python-dateutil==2.8.2
 python-dotenv==0.21.1

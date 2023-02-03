@@ -7,7 +7,9 @@ class DBTHelper:
         self.client = client
 
     def _get_fields(self, project_id: str, dataset: str, table: str, json_field: str):
+
         source = f"{project_id}.{dataset}.{table}"
+        print(source)
         query = f"SELECT * FROM `{source}` LIMIT 1"
         data = self.client.load_gbq(query)
 
@@ -40,8 +42,7 @@ class DBTHelper:
         dbt_query = """WITH\n\tt AS (\n\t\tSELECT"""
         for i, field in enumerate(fields):
             dbt_query = dbt_query + f"\n\t\t\t{field}"
-            if i < len(fields) - 1:
-                dbt_query = dbt_query + ","
+            dbt_query = dbt_query + ","
 
         fields = self._get_fields(project_id, dataset, table, unnest_field)
         for i, field in enumerate(fields):
